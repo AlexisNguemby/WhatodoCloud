@@ -2,7 +2,7 @@
 
 async function uploadToGoogleDrive(file) {
    
-    const ACCESS_TOKEN = 'ya29.a0AZYkNZi_BLFdMXp8Ja8wsSwAvdGj6tiQBkaGVv_JNFgK8km_ZgTXRP8TUlDBz6zoTtHItKTiAdWxI5pgMnYZtLGHKPF_86Oe1sF8uS1-_xvAlHbgG54pRVYiNgqazfJk3LzGan_e652h_9TxJ19ht9Nlwq924gdTRe7M2GnEaCgYKAUcSARASFQHGX2Mi-A58Kk6R8DW4W_O9-vIIGA0175';
+    const ACCESS_TOKEN = ' WIP ! INSERT TOKKEN HERE ps: onlyAvailable  1hour you can use Node.js to refresh it';
     const UPLOAD_URL = 'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart';
 
     const metadata = {
