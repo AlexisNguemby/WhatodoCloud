@@ -1,7 +1,7 @@
 
 
 async function uploadToGoogleDrive(file) {
-    // Remplace par ton Access Token récupéré
+   
     const ACCESS_TOKEN = 'ya29.a0AZYkNZi_BLFdMXp8Ja8wsSwAvdGj6tiQBkaGVv_JNFgK8km_ZgTXRP8TUlDBz6zoTtHItKTiAdWxI5pgMnYZtLGHKPF_86Oe1sF8uS1-_xvAlHbgG54pRVYiNgqazfJk3LzGan_e652h_9TxJ19ht9Nlwq924gdTRe7M2GnEaCgYKAUcSARASFQHGX2Mi-A58Kk6R8DW4W_O9-vIIGA0175';
     const UPLOAD_URL = 'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart';
 
@@ -14,7 +14,7 @@ async function uploadToGoogleDrive(file) {
     formData.append("metadata", new Blob([JSON.stringify(metadata)], { type: "application/json" }));
     formData.append("file", file);
 
-    // Requête pour uploader le fichier
+    // Upload request
     const response = await fetch(UPLOAD_URL, {
         method: 'POST',
         headers: {
@@ -23,18 +23,18 @@ async function uploadToGoogleDrive(file) {
         body: formData
     });
 
-    // Vérification de la réponse
+    //  
     if (!response.ok) throw new Error('Upload échoué');
     const data = await response.json();
     console.log('Fichier uploadé avec succès :', data);
     alert('Fichier uploadé sur Google Drive !');
 }
 
-// Écouteur d'événement sur le champ de fichier
+// 
 document.getElementById('file').addEventListener('change', async function(event) {
     const file = event.target.files[0];
 
-    // Message de confirmation de l'upload
+    // Upload msg
     alert('Super ! Upload en cours...');
     try {
         // Appel de la fonction d'upload
